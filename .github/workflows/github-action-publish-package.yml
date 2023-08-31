@@ -49,5 +49,5 @@ jobs:
       - name: Build and push the serverless-service Docker image
         run: |
           task jib
-          docker tag event-service:latest ghcr.io/domehahn/serverless-service:latest
+          docker tag serverless-service:latest ghcr.io/domehahn/serverless-service:latest
           docker push ghcr.io/domehahn/serverless-service:latest
