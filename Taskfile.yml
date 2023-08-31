@@ -1,0 +1,22 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the app
+    cmds:
+      - ./gradlew clean build
+
+  jib:
+    desc: Create Docker Image with JIB
+    cmds:
+      - ./gradlew jibDockerBuild
+
+  compose-up:
+    desc: Start all Docker Container at once
+    cmds:
+      - docker compose up -d
+
+  compose-down:
+      desc: Stop all Docker Container at once
+      cmds:
+        - docker compose down
