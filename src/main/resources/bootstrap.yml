@@ -26,3 +26,5 @@ spring:
       uri: http://config-server:1234
   config:
     import: "configserver:http://config-server:1234"
+logging:
+  config: ${spring.cloud.config.uri}/${spring.application.name}/${spring.profiles.active}/main/${spring.application.name}/${spring.profiles.active}/logback-spring.xml
